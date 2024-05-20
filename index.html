@@ -1,0 +1,388 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Car Website</title>
+
+
+
+<style>
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  background-color: red; 
+  cursor: pointer; 
+  padding: 15px; 
+  width: 25px;
+  height: 25px;
+  border: 10px solid #333;
+  border-left: 0;
+  border-top: 0;
+
+  transform: rotate(225deg);
+}
+
+
+#myBtn:hover {
+  background-color: #555; 
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+.BUTTON1{
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+ 
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.BUTTON1::after,
+.BUTTON1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.BUTTON1::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.BUTTON1::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(40px);
+  webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+}
+
+.BUTTON1:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+  
+}
+
+    
+img {
+border-radius: 50%; 
+height:100px;   
+}
+
+.Img1 {
+height:50%;
+
+}
+.Img11{
+height:50%;
+
+
+
+    
+}    
+    
+.BUTTON1:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.BUTTON1:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+.BUTTON1:hover{
+
+
+text-decoration:underline rgb(0,2,3,4);
+}
+
+.BUTTON2{
+  text-decoration: none;
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.BUTTON2:hover {
+  background-position: right center;
+ 
+  color: #fff;
+text-decoration:underline;
+
+}
+
+.BUTTON2:active {
+  transform: scale(0.95);
+}
+
+
+.BUTOON3 {
+  text-decoration:none;
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.BUTOON3:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.BUTOON3:hover:after {
+  transform: translate(0, 0);
+}
+
+.BUTOON3:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+
+
+.BUTOON3:hover{
+ text-decoration:underline; 
+  
+}
+
+
+    
+    
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background-color: #444;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+}
+
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.car-list article {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.car-list article h2 {
+  margin-top: 0;
+}
+
+.car-list article img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+
+    
+    
+    
+    
+.Home-Afzal:hover,
+.Cars-afzal:hover,
+.About-usafzal:hover{
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+text-decoration:underline;
+
+}
+
+  
+}
+</style>
+
+
+
+    
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to Our Car Website</h1>  
+  </header>
+  <nav>
+    <ul>
+      
+       <li><a href="https://app.edublocks.org/project/iUfywRWowQWuQqZzIaOzrLI7Ddl1/99qWRQMFHzCThe1WBR4F" class="Home-Afzal">Home</a></li>
+      <li><a href="#" class="Cars-afzal">Cars</a></li>
+      <li><a href="#" class="About-usafzal">About Us</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="car-list">
+      <article>
+        <h2>Car Model 1</h2>
+        <div class="Img1">
+          
+        <a href ="https://www.lamborghini.com/en-en/models/urus/urus-se" target="_blank"><img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/urus_se/s/image_s_2.jpg" alt="Car Model 1" class="Img1" border=></a>
+            </div>
+            <p>Mercedes Benz.</p>
+        <button  class="BUTTON1"><a style="text-decoration:none" href="https://www.topgear.com/car-reviews/mercedes-benz/s-class"target="_blank">Learn More</a></button>
+  
+          </article> 
+        
+      <article>
+        <h2>Car Model 2</h2>
+        <a href="https://www.carwow.co.uk/bmw/i7#gref"target="_blank"><img src="https://www.bentleymotors.com/content/dam/bm/websites/bmcom/bentleymotors-com/models/24my/bentayga-swb/black-edition/Stage%20Media%201%20Retouch.jpg/_jcr_content/renditions/original.image_file.1024.768.file/Stage%20Media%201%20Retouch.jpg"></a>
+<p>BMW</p>
+<button class="BUTTON2"><a style="text-decoration:none" href="https://www.carwow.co.uk/bmw/i7#gref"target="_blank">Learn More</a></button>
+      </article>
+      <article>
+        <h2>Car Model 3</h2>
+        <div class="">
+         
+        <a href="https://uk.motor1.com/photos/866791/the-point-by-point-novelties-of-the-toyota-yaris-2024/#7500544_the-point-by-point-news-of-the-toyota-yaris-2024" target="_blank"><img src="https://cdn.motor1.com/images/mgl/9mNgP1/s1/le-novita-punto-per-punto-della-toyota-yaris-2024.jpg" alt="Car Model 3" class="Img11"></a>
+        </div>
+            <p>Toyota</p>
+            
+        <button class="BUTOON3"><a style="text-decoration:none" href="https://uk.motor1.com/photos/866791/the-point-by-point-novelties-of-the-toyota-yaris-2024/#7500544_the-point-by-point-news-of-the-toyota-yaris-2024"target=_blank >Learn More</a></button>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Afzals Car Website. All rights reserved.</p>
+  </footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+<script>
+
+
+let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+    
+</script>
+</body>
+</html>
+
